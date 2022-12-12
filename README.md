@@ -16,7 +16,7 @@
   - series: серия карты
   - number: кол-во генерируемых карт
   - term: срок действия карты
-    GET /api/v1/card/generate/{series}/{number}/{term}
+GET /api/v1/card/generate/{series}/{number}/{term}
 
 ## Как запустить проект:
 Клонировать репозиторий и перейти в него в командной строке:
