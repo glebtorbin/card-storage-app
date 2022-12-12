@@ -12,10 +12,10 @@ class PaymentSerializer(serializers.ModelSerializer):
         model = Payment
 
 class CardDetailSerializer(serializers.ModelSerializer):
-    purchases = PaymentSerializer(many=True, read_only=True)
+    payments = PaymentSerializer(many=True, read_only=True)
 
     class Meta:
-        fields = ('id', 'series', 'number', 'release_date', 'ending_date', 'status', 'purchases')
+        fields = ('id', 'series', 'number', 'release_date', 'ending_date', 'status', 'payments')
         model = Card
 
 
