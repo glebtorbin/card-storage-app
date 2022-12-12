@@ -18,6 +18,9 @@ class Card(models.Model):
     status = models.CharField('status', max_length=11,
                   choices=CARD_STATUSES,
                   default=DEACT)
+    
+    def __str__(self) -> str:
+        return f'{self.series}{self.number}'
 
 class Payment(models.Model):
     card = models.ForeignKey(
@@ -25,4 +28,4 @@ class Payment(models.Model):
         related_name='payments'
     )
     purchase_amount = models.DecimalField('purchase amout', max_digits=5, decimal_places=2)
-    purchase_date = models.DateTimeField('purchase date', auto_now_add=False)
+    purchase_date = models.DateTimeField('purchase date', auto_now_add=True)

@@ -21,6 +21,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'storage',
+    'api'
 ]
 
 MIDDLEWARE = [
@@ -32,6 +33,11 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+REST_FRAMEWORK = {
+
+    'DATETIME_FORMAT': "%Y-%m-%d %H:%M:%S",
+}
 
 ROOT_URLCONF = 'app.urls'
 
